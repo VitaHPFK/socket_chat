@@ -2,7 +2,7 @@ import tkinter as tk
 import socket
 import threading
 
-def send_to_socket(message='dawdw'):
+def send_to_socket(message='Nick: Test messages'):
     if message:
         server_socket.send(message.encode())
         entry.delete(0, tk.END)
@@ -40,11 +40,11 @@ entry.pack(padx=10, pady=5)
 
 #todo: 1. Додати entry поле на екран, щоб отримати nickname
 
-send_button = tk.Button(root, text="Надіслати", command=send_to_socket)
+send_button = tk.Button(root, text="Надіслати", command=send_message)
 send_button.pack(padx=10, pady=5)
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.connect(('host', 9999))
+server_socket.connect(('151.115.78.136', 9999))
 
 receive_thread = threading.Thread(target=receive_messages)
 receive_thread.start()
