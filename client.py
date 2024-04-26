@@ -22,8 +22,6 @@ def send_message():
     #todo: 4. Скласти одне повідомлення з nickname та повідомлення в форматі: "nickname: messages"
     #todo: 5. Передати повідомлення через функцію send_to_socket
 
-
-    #hghkj
     pass
 
 
