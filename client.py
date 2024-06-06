@@ -46,5 +46,4 @@ server_socket.connect(('151.115.78.136', 9999))
 
 receive_thread = threading.Thread(target=receive_messages)
 receive_thread.start()
-
 root.mainloop()
